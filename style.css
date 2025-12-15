@@ -1,6 +1,10 @@
 /* WebStandardy.cz - Styly */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* ============================================================================
+   GLOBÁLNÍ STYLY (používané na VŠECH stránkách)
+   ============================================================================ */
+
 /* Reset */
 *,
 *::before,
@@ -344,7 +348,11 @@ strong {
     border-color: #0a0a0a;
 }
 
-/* Karty grid */
+/* ============================================================================
+   START INDEX.HTML - Styly specifické pro úvodní stránku
+   ============================================================================ */
+
+/* Karty grid - sekce "Proč je to důležité" */
 .karty-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -435,7 +443,16 @@ strong {
     margin: 0;
 }
 
-/* Kod bloky */
+/* ============================================================================
+   END INDEX.HTML
+   ============================================================================ */
+
+
+/* ============================================================================
+   START HTML.HTML - Styly specifické pro stránku o HTML
+   ============================================================================ */
+
+/* Kod bloky - ukázky HTML kódu */
 .kod-blok {
     background-color: #f5f5f5;
     border: 1px solid #e5e5e5;
@@ -696,7 +713,16 @@ strong {
     color: #595959;
 }
 
-/* Box model demo */
+/* ============================================================================
+   END HTML.HTML
+   ============================================================================ */
+
+
+/* ============================================================================
+   START CSS.HTML - Styly specifické pro stránku o CSS
+   ============================================================================ */
+
+/* Box model demo - vizualizace margin/border/padding */
 .box-model-demo {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -839,7 +865,16 @@ strong {
     letter-spacing: 0.05em;
 }
 
-/* WCAG principy */
+/* ============================================================================
+   END CSS.HTML
+   ============================================================================ */
+
+
+/* ============================================================================
+   START PRISTUPNOST.HTML - Styly specifické pro stránku o přístupnosti
+   ============================================================================ */
+
+/* WCAG principy - 4 principy přístupnosti */
 .wcag-principy {
     display: grid;
     gap: 1rem;
@@ -965,7 +1000,16 @@ strong {
     margin-bottom: 1rem;
 }
 
-/* Validace chyby */
+/* ============================================================================
+   END PRISTUPNOST.HTML
+   ============================================================================ */
+
+
+/* ============================================================================
+   START VALIDACE.HTML - Styly specifické pro stránku o validaci
+   ============================================================================ */
+
+/* Validace chyby - seznam typických chyb */
 .chyby-validace {
     display: flex;
     flex-direction: column;
@@ -1125,7 +1169,16 @@ strong {
     margin-bottom: 0;
 }
 
-/* Sekce navigace */
+/* ============================================================================
+   END VALIDACE.HTML
+   ============================================================================ */
+
+
+/* ============================================================================
+   SPOLEČNÉ KOMPONENTY (používané na více stránkách)
+   ============================================================================ */
+
+/* Sekce navigace - "Další stránka" odkazy */
 .sekce-navigace {
     text-align: center;
     padding: 2rem 0;
@@ -1232,7 +1285,11 @@ strong {
     margin-bottom: 0;
 }
 
-/* Responzivni design */
+
+/* ============================================================================
+   RESPONZIVNÍ DESIGN (Media Queries)
+   ============================================================================ */
+
 @media (max-width: 900px) {
 
     .karty-grid,
@@ -1354,7 +1411,11 @@ strong {
     }
 }
 
-/* Tisk */
+
+/* ============================================================================
+   PRINT STYLY (pro tisk stránky)
+   ============================================================================ */
+
 @media print {
     * {
         background: white !important;
