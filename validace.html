@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Validace webu - W3C validátor, chyby a testování">
+    <meta name="keywords" content="validace, W3C, HTML validace, testování">
+    <meta name="author" content="Student">
+
+    <title>Validace | WebStandardy.cz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="html.html">
+    <link rel="prefetch" href="css.html">
+    <link rel="prefetch" href="pristupnost.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hlavicka">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe"></i>
+                <span class="logo-text">WebStandardy<span class="logo-cz">.cz</span></span>
+            </a>
+
+            <nav class="hlavni-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="menu-toggle-label">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </label>
+
+                <ul class="nav-seznam">
+                    <li><a href="index.html" class="nav-odkaz">Úvod</a></li>
+                    <li><a href="html.html" class="nav-odkaz">HTML5</a></li>
+                    <li><a href="css.html" class="nav-odkaz">CSS3</a></li>
+                    <li><a href="pristupnost.html" class="nav-odkaz">Přístupnost</a></li>
+                    <li><a href="validace.html" class="nav-odkaz aktivni">Validace</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hlavni-obsah">
+        <section class="hero hero-mala">
+            <div class="container">
+                <h1>Validace kódu</h1>
+                <p class="hero-popis">
+                    Validace ověří, že je kód napsaný správně podle standardů.
+                    Validní kód funguje lépe a způsobuje méně problémů.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Co je validace</h2>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <p>
+                            <strong>Validace</strong> je proces kontroly, zda kód odpovídá
+                            standardům HTML a CSS. Validní kód má několik výhod:
+                        </p>
+                        <ul class="seznam-standardu">
+                            <li><strong>Kompatibilita</strong> - funguje ve všech prohlížečích</li>
+                            <li><strong>Přístupnost</strong> - asistivní technologie ho lépe čtou</li>
+                            <li><strong>Výkon</strong> - prohlížeč ho zpracuje efektivněji</li>
+                            <li><strong>Údržba</strong> - snazší hledání chyb</li>
+                        </ul>
+                    </div>
+                    <div class="sloupec">
+                        <div class="info-box info-dulezite">
+                            <h3><i data-lucide="wrench"></i> W3C Validátor</h3>
+                            <p>
+                                Hlavní nástroj pro validaci je
+                                <a href="https://validator.w3.org/" target="_blank" rel="noopener">validator.w3.org</a>
+                            </p>
+                            <p>Můžete validovat:</p>
+                            <ul>
+                                <li>URL adresu webu</li>
+                                <li>Nahraný soubor</li>
+                                <li>Přímo vložený kód</li>
+                            </ul>
+                            <div class="validacni-badges">
+                                <img src="img/html5-badge.svg" alt="HTML5 Valid Badge" width="64" height="64">
+                                <img src="img/css-valid.png" alt="CSS Valid Badge" height="32">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Nejčastější chyby při validaci</h2>
+
+                <div class="chyby-validace">
+                    <div class="chyba-validace">
+                        <div class="chyba-hlavicka">
+                            <span class="chyba-typ">Error</span>
+                            <span class="chyba-nazev">Element not allowed as child</span>
+                        </div>
+                        <p>Značka je použita na místě, kde nesmí být (například div uvnitř odstavce).</p>
+                        <div class="chyba-reseni"><i data-lucide="check"></i> Zkontrolujte vnořování elementů</div>
+                    </div>
+
+                    <div class="chyba-validace">
+                        <div class="chyba-hlavicka">
+                            <span class="chyba-typ">Error</span>
+                            <span class="chyba-nazev">Duplicate ID</span>
+                        </div>
+                        <p>Stejné ID je použité vícekrát. ID musí být v rámci stránky unikátní.</p>
+                        <div class="chyba-reseni"><i data-lucide="check"></i> Použijte class místo ID, nebo ID
+                            přejmenujte</div>
+                    </div>
+
+                    <div class="chyba-validace">
+                        <div class="chyba-hlavicka">
+                            <span class="chyba-typ">Error</span>
+                            <span class="chyba-nazev">Missing required attribute</span>
+                        </div>
+                        <p>Chybí povinný atribut (nejčastěji alt u obrázků).</p>
+                        <div class="chyba-reseni"><i data-lucide="check"></i> Doplňte chybějící atribut</div>
+                    </div>
+
+                    <div class="chyba-validace">
+                        <div class="chyba-hlavicka">
+                            <span class="chyba-typ">Warning</span>
+                            <span class="chyba-nazev">Empty heading</span>
+                        </div>
+                        <p>Nadpis neobsahuje žádný text.</p>
+                        <div class="chyba-reseni"><i data-lucide="check"></i> Přidejte obsah nebo použijte jinou značku
+                        </div>
+                    </div>
+
+                    <div class="chyba-validace">
+                        <div class="chyba-hlavicka">
+                            <span class="chyba-typ">Warning</span>
+                            <span class="chyba-nazev">Section lacks heading</span>
+                        </div>
+                        <p>Element section by měl obsahovat nadpis (h2-h6).</p>
+                        <div class="chyba-reseni"><i data-lucide="check"></i> Přidejte nadpis nebo použijte div</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Vyzkoušejte si znalosti</h2>
+                <p class="sekce-uvod">
+                    Krátký kvíz pro ověření, co jste se naučili o webových standardech.
+                </p>
+
+                <div class="quiz" id="quiz">
+                    <div class="quiz-start">
+                        <p>Kvíz obsahuje 5 otázek z oblasti HTML, CSS a přístupnosti.</p>
+                        <button class="tlacitko tlacitko-hlavni" id="start-quiz">
+                            <i data-lucide="play"></i> Spustit kvíz
+                        </button>
+                    </div>
+
+                    <div class="quiz-otazka" id="quiz-container" style="display: none;">
+                        <div class="quiz-progress">
+                            <span id="quiz-progress-text">Otázka 1 z 5</span>
+                        </div>
+                        <h3 class="quiz-otazka-text" id="quiz-question"></h3>
+                        <div class="quiz-odpovedi" id="quiz-answers"></div>
+                    </div>
+
+                    <div class="quiz-vysledek" id="quiz-result" style="display: none;">
+                        <h3>Výsledek</h3>
+                        <div class="vysledek-cislo" id="result-score"></div>
+                        <p class="vysledek-text" id="result-message"></p>
+                        <button class="tlacitko tlacitko-hlavni" id="restart-quiz">
+                            <i data-lucide="rotate-ccw"></i> Zkusit znovu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Užitečné nástroje</h2>
+
+                <div class="nastroje-karty">
+                    <a href="https://validator.w3.org/" target="_blank" rel="noopener" class="nastroj-karta">
+                        <i data-lucide="check-circle"></i>
+                        <h3>W3C HTML Validátor</h3>
+                        <p>Oficiální validátor HTML</p>
+                    </a>
+
+                    <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener" class="nastroj-karta">
+                        <i data-lucide="palette"></i>
+                        <h3>W3C CSS Validátor</h3>
+                        <p>Kontrola CSS stylů</p>
+                    </a>
+
+                    <a href="https://wave.webaim.org/" target="_blank" rel="noopener" class="nastroj-karta">
+                        <i data-lucide="accessibility"></i>
+                        <h3>WAVE</h3>
+                        <p>Testování přístupnosti</p>
+                    </a>
+
+                    <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener" class="nastroj-karta">
+                        <i data-lucide="zap"></i>
+                        <h3>PageSpeed Insights</h3>
+                        <p>Rychlost a výkon</p>
+                    </a>
+
+                    <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener"
+                        class="nastroj-karta">
+                        <i data-lucide="contrast"></i>
+                        <h3>Contrast Checker</h3>
+                        <p>Kontrola kontrastů</p>
+                    </a>
+
+                    <a href="https://caniuse.com/" target="_blank" rel="noopener" class="nastroj-karta">
+                        <i data-lucide="bar-chart-3"></i>
+                        <h3>Can I Use</h3>
+                        <p>Podpora v prohlížečích</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce sekce-zaver">
+            <div class="container">
+                <h2>To je vše</h2>
+                <p class="zaver-text">
+                    Prošli jste celým průvodcem webovými standardy. Teď už víte, jak vytvářet
+                    kvalitní, přístupné a validní weby. Zbývá tyto znalosti aplikovat v praxi.
+                </p>
+                <div class="zaver-akce">
+                    <a href="index.html" class="tlacitko tlacitko-sekundarni">
+                        <i data-lucide="arrow-left"></i> Zpět na úvod
+                    </a>
+                    <a href="https://validator.w3.org/" target="_blank" rel="noopener" class="tlacitko tlacitko-hlavni">
+                        Validovat svůj web <i data-lucide="external-link"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="container">
+            <div class="paticka-obsah">
+                <div class="paticka-sekce">
+                    <h4>WebStandardy.cz</h4>
+                    <p>Web vytvořený jako závěrečná práce.</p>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="html.html">HTML5</a></li>
+                        <li><a href="css.html">CSS3</a></li>
+                        <li><a href="pristupnost.html">Přístupnost</a></li>
+                        <li><a href="validace.html">Validace</a></li>
+                    </ul>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Zdroje</h4>
+                    <ul>
+                        <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+                        </li>
+                        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paticka-spodek">
+                <p>© 2025 WebStandardy.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

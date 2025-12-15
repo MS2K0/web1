@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 - sémantické značky, struktura dokumentu a základy">
+    <meta name="keywords" content="HTML5, sémantické značky, struktura webu">
+    <meta name="author" content="Student">
+
+    <title>HTML5 | WebStandardy.cz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Prednahrani stranek -->
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="css.html">
+    <link rel="prefetch" href="pristupnost.html">
+    <link rel="prefetch" href="validace.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hlavicka">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe"></i>
+                <span class="logo-text">WebStandardy<span class="logo-cz">.cz</span></span>
+            </a>
+
+            <nav class="hlavni-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="menu-toggle-label">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </label>
+
+                <ul class="nav-seznam">
+                    <li><a href="index.html" class="nav-odkaz">Úvod</a></li>
+                    <li><a href="html.html" class="nav-odkaz aktivni">HTML5</a></li>
+                    <li><a href="css.html" class="nav-odkaz">CSS3</a></li>
+                    <li><a href="pristupnost.html" class="nav-odkaz">Přístupnost</a></li>
+                    <li><a href="validace.html" class="nav-odkaz">Validace</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hlavni-obsah">
+        <section class="hero hero-mala">
+            <div class="container hero-s-obrazkem">
+                <div class="hero-text">
+                    <h1>HTML5</h1>
+                    <p class="hero-popis">
+                        HTML je značkovací jazyk, který tvoří základ každé webové stránky.
+                        Bez něj by prohlížeč nevěděl, jak obsah zobrazit.
+                    </p>
+                </div>
+                <div class="hero-obrazek">
+                    <img src="img/html5-logo.svg" alt="Oficiální logo HTML5" width="120" height="120">
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Co je HTML</h2>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <p>
+                            <strong>HTML</strong> (<em>HyperText Markup Language</em>) je značkovací jazyk,
+                            který definuje strukturu webové stránky. Není to programovací jazyk - pouze
+                            říkáte prohlížeči, co je nadpis, co je odstavec, kde je odkaz a podobně.
+                        </p>
+                        <p>
+                            Aktuální verze je HTML5, která přinesla nové sémantické značky jako
+                            <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> nebo <code>&lt;article&gt;</code>.
+                            Díky nim je jasnější, co která část stránky představuje.
+                        </p>
+                    </div>
+                    <div class="sloupec">
+                        <div class="kod-blok">
+                            <div class="kod-hlavicka">
+                                <span class="kod-jazyk">HTML</span>
+                                <span class="kod-nazev">Základní struktura</span>
+                            </div>
+                            <pre class="kod-obsah"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="cs"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Můj web&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Ahoj&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Historie HTML</h2>
+
+                <div class="timeline">
+                    <div class="timeline-polozka timeline-s-obrazkem">
+                        <div class="timeline-rok">1991</div>
+                        <div class="timeline-obsah">
+                            <h3>HTML 1.0</h3>
+                            <p>Tim Berners-Lee vytvořil první verzi HTML s 18 značkami.</p>
+                            <figure class="timeline-figure">
+                                <img src="img/tim-berners-lee.jpg" alt="Tim Berners-Lee, zakladatel World Wide Web"
+                                    width="200" loading="lazy">
+                                <figcaption>Tim Berners-Lee © Silvio Tanaka (CC BY-SA 2.0)</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="timeline-polozka">
+                        <div class="timeline-rok">1995</div>
+                        <div class="timeline-obsah">
+                            <h3>HTML 2.0</h3>
+                            <p>První oficiální specifikace jako RFC dokument.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-polozka">
+                        <div class="timeline-rok">1999</div>
+                        <div class="timeline-obsah">
+                            <h3>HTML 4.01</h3>
+                            <p>Stabilní verze, která se používala řadu let.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-polozka">
+                        <div class="timeline-rok">2014</div>
+                        <div class="timeline-obsah">
+                            <h3>HTML5</h3>
+                            <p>Současný standard s novými značkami a podporou multimédií.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Sémantické značky</h2>
+
+                <p class="sekce-uvod">
+                    Sémantické značky mají význam - prohlížeč a vyhledávače díky nim vědí,
+                    co daná část stránky představuje. Je to důležité jak pro přístupnost, tak pro SEO.
+                </p>
+
+                <div class="semantika-grid">
+                    <div class="semantika-polozka">
+                        <code>&lt;header&gt;</code>
+                        <p>Záhlaví stránky nebo sekce</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;nav&gt;</code>
+                        <p>Navigační menu</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;main&gt;</code>
+                        <p>Hlavní obsah stránky</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;article&gt;</code>
+                        <p>Samostatný článek nebo příspěvek</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;section&gt;</code>
+                        <p>Tematická sekce obsahu</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;aside&gt;</code>
+                        <p>Vedlejší obsah, sidebar</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;footer&gt;</code>
+                        <p>Zápatí stránky nebo sekce</p>
+                    </div>
+                    <div class="semantika-polozka">
+                        <code>&lt;figure&gt;</code>
+                        <p>Obrázek s popiskem</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Správný vs. špatný přístup</h2>
+
+                <div class="porovnani">
+                    <div class="porovnani-sloupec porovnani-spatne">
+                        <h3><i data-lucide="x"></i> Starší přístup</h3>
+                        <div class="kod-blok">
+                            <pre class="kod-obsah"><code>&lt;div id="header"&gt;
+    &lt;div id="nav"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="main"&gt;
+    &lt;div class="article"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footer"&gt;...&lt;/div&gt;</code></pre>
+                        </div>
+                        <p>Samé divy - prohlížeč netuší, co je co.</p>
+                    </div>
+
+                    <div class="porovnani-sloupec porovnani-spravne">
+                        <h3><i data-lucide="check"></i> Moderní přístup</h3>
+                        <div class="kod-blok">
+                            <pre class="kod-obsah"><code>&lt;header&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        ...
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;</code></pre>
+                        </div>
+                        <p>Sémantické značky - jasná struktura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Časté chyby</h2>
+
+                <div class="chyby-seznam">
+                    <div class="chyba-polozka">
+                        <div class="chyba-ikona"><i data-lucide="alert-triangle"></i></div>
+                        <div class="chyba-obsah">
+                            <h3>Chybějící alt u obrázků</h3>
+                            <p>
+                                Každý obrázek musí mít atribut <code>alt</code> s popisem.
+                                Bez něj nevidomí uživatelé nevědí, co obrázek zobrazuje.
+                            </p>
+                            <code class="chyba-priklad">❌ &lt;img src="foto.jpg"&gt;</code>
+                            <code
+                                class="chyba-priklad chyba-spravne">✓ &lt;img src="foto.jpg" alt="Západ slunce nad mořem"&gt;</code>
+                        </div>
+                    </div>
+
+                    <div class="chyba-polozka">
+                        <div class="chyba-ikona"><i data-lucide="alert-triangle"></i></div>
+                        <div class="chyba-obsah">
+                            <h3>Více H1 na stránce</h3>
+                            <p>
+                                Každá stránka by měla mít pouze jeden <code>&lt;h1&gt;</code>.
+                                Další nadpisy jsou H2, H3 a tak dále.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="chyba-polozka">
+                        <div class="chyba-ikona"><i data-lucide="alert-triangle"></i></div>
+                        <div class="chyba-obsah">
+                            <h3>Neuzavřené značky</h3>
+                            <p>
+                                Každá otevírací značka potřebuje zavírací. Prohlížeč to někdy překousne,
+                                ale validátor na to upozorní.
+                            </p>
+                            <code class="chyba-priklad">❌ &lt;p&gt;Text bez konce</code>
+                            <code class="chyba-priklad chyba-spravne">✓ &lt;p&gt;Text s koncem&lt;/p&gt;</code>
+                        </div>
+                    </div>
+
+                    <div class="chyba-polozka">
+                        <div class="chyba-ikona"><i data-lucide="alert-triangle"></i></div>
+                        <div class="chyba-obsah">
+                            <h3>Tabulky pro layout</h3>
+                            <p>
+                                Tabulky jsou určené pro tabulární data, ne pro rozložení stránky.
+                                Pro layout se používá Flexbox nebo Grid.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce sekce-navigace">
+            <div class="container">
+                <div class="dalsi-stranka">
+                    <span class="dalsi-label">Další téma</span>
+                    <a href="css.html" class="tlacitko tlacitko-hlavni">
+                        CSS3 - Stylování webu <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="container">
+            <div class="paticka-obsah">
+                <div class="paticka-sekce">
+                    <h4>WebStandardy.cz</h4>
+                    <p>Web vytvořený jako závěrečná práce.</p>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="html.html">HTML5</a></li>
+                        <li><a href="css.html">CSS3</a></li>
+                        <li><a href="pristupnost.html">Přístupnost</a></li>
+                        <li><a href="validace.html">Validace</a></li>
+                    </ul>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Zdroje</h4>
+                    <ul>
+                        <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+                        </li>
+                        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paticka-spodek">
+                <p>© 2025 WebStandardy.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

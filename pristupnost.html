@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Přístupnost webu - WCAG, alt texty, kontrasty a testování">
+    <meta name="keywords" content="přístupnost, WCAG, a11y, alt texty">
+    <meta name="author" content="Student">
+
+    <title>Přístupnost | WebStandardy.cz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="html.html">
+    <link rel="prefetch" href="css.html">
+    <link rel="prefetch" href="validace.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hlavicka">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe"></i>
+                <span class="logo-text">WebStandardy<span class="logo-cz">.cz</span></span>
+            </a>
+
+            <nav class="hlavni-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="menu-toggle-label">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </label>
+
+                <ul class="nav-seznam">
+                    <li><a href="index.html" class="nav-odkaz">Úvod</a></li>
+                    <li><a href="html.html" class="nav-odkaz">HTML5</a></li>
+                    <li><a href="css.html" class="nav-odkaz">CSS3</a></li>
+                    <li><a href="pristupnost.html" class="nav-odkaz aktivni">Přístupnost</a></li>
+                    <li><a href="validace.html" class="nav-odkaz">Validace</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hlavni-obsah">
+        <section class="hero hero-mala">
+            <div class="container hero-s-obrazkem">
+                <div class="hero-text">
+                    <h1>Přístupnost</h1>
+                    <p class="hero-popis">
+                        Přístupný web mohou používat i lidé s různými postiženími.
+                        Je to důležité téma, které se často opomíjí.
+                    </p>
+                </div>
+                <div class="hero-obrazek">
+                    <img src="img/wheelchair.svg" alt="Mezinárodní symbol přístupnosti" width="100" height="100">
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Co je webová přístupnost</h2>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <p>
+                            <strong>Webová přístupnost</strong> (anglicky <em>accessibility</em>,
+                            zkráceně <strong>a11y</strong>) znamená, že web mohou používat všichni
+                            lidé bez ohledu na jejich schopnosti nebo omezení.
+                        </p>
+                        <p>Přístupný web pomáhá lidem:</p>
+                        <ul class="seznam-standardu">
+                            <li>Se <strong>zrakovým postižením</strong> - nevidomí, slabozrací</li>
+                            <li>Se <strong>sluchovým postižením</strong> - neslyšící</li>
+                            <li>S <strong>motorickým postižením</strong> - nemohou používat myš</li>
+                            <li>S <strong>kognitivním postižením</strong> - dyslexie, ADHD</li>
+                            <li>S <strong>dočasným omezením</strong> - zlomená ruka, hluk</li>
+                        </ul>
+                    </div>
+                    <div class="sloupec">
+                        <div class="info-box info-dulezite">
+                            <h3><i data-lucide="lightbulb"></i> Zajímavosti</h3>
+                            <ul>
+                                <li>V ČR žije přes <strong>1 milion</strong> lidí s hendikepem</li>
+                                <li>Přístupný web je často <strong>lepší pro SEO</strong></li>
+                                <li>Státní weby <strong>musí</strong> být přístupné ze zákona</li>
+                                <li>Přístupnost pomáhá i <strong>starším uživatelům</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>WCAG - Pravidla přístupnosti</h2>
+
+                <p class="sekce-uvod">
+                    <strong>WCAG</strong> (<em>Web Content Accessibility Guidelines</em>) je
+                    mezinárodní standard pro přístupnost. Aktuální verze je WCAG 2.2 a má čtyři hlavní principy.
+                </p>
+
+                <div class="wcag-principy">
+                    <div class="wcag-princip">
+                        <div class="wcag-cislo">1</div>
+                        <div class="wcag-obsah">
+                            <h3>Vnímatelnost</h3>
+                            <p>Informace musí být prezentovány tak, aby je uživatelé mohli vnímat.</p>
+                            <ul>
+                                <li>Textové alternativy pro obrázky</li>
+                                <li>Titulky u videí</li>
+                                <li>Dostatečný barevný kontrast</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wcag-princip">
+                        <div class="wcag-cislo">2</div>
+                        <div class="wcag-obsah">
+                            <h3>Ovladatelnost</h3>
+                            <p>Rozhraní musí být ovladatelné různými způsoby.</p>
+                            <ul>
+                                <li>Ovládání klávesnicí</li>
+                                <li>Dostatek času na interakci</li>
+                                <li>Žádné blikající prvky</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wcag-princip">
+                        <div class="wcag-cislo">3</div>
+                        <div class="wcag-obsah">
+                            <h3>Srozumitelnost</h3>
+                            <p>Obsah a ovládání musí být srozumitelné.</p>
+                            <ul>
+                                <li>Čitelný text</li>
+                                <li>Předvídatelné chování</li>
+                                <li>Pomoc při vyplňování formulářů</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wcag-princip">
+                        <div class="wcag-cislo">4</div>
+                        <div class="wcag-obsah">
+                            <h3>Robustnost</h3>
+                            <p>Obsah musí být použitelný různými technologiemi.</p>
+                            <ul>
+                                <li>Validní kód</li>
+                                <li>Kompatibilita s asistivními technologiemi</li>
+                                <li>Správné použití ARIA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Praktické tipy</h2>
+
+                <div class="tipy-grid">
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="image"></i></div>
+                        <h3>Alt texty u obrázků</h3>
+                        <p>Každý významový obrázek potřebuje popis v atributu <code>alt</code>.</p>
+                        <div class="kod-blok kod-maly">
+                            <pre class="kod-obsah"><code>&lt;img src="graf.png" 
+     alt="Graf ukazující růst o 50%"&gt;
+
+&lt;!-- Dekorativní obrázek --&gt;
+&lt;img src="dekorace.png" alt=""&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="contrast"></i></div>
+                        <h3>Barevný kontrast</h3>
+                        <p>Poměr kontrastu mezi textem a pozadím musí být minimálně <strong>4.5:1</strong>.</p>
+                        <div class="kontrast-demo">
+                            <div class="kontrast-priklad kontrast-spatny">
+                                <span>Špatně</span>
+                            </div>
+                            <div class="kontrast-priklad kontrast-dobry">
+                                <span>Dobře</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="keyboard"></i></div>
+                        <h3>Ovládání klávesnicí</h3>
+                        <p>Vše musí jít ovládat bez myši. Focus stav musí být viditelný.</p>
+                        <div class="kod-blok kod-maly">
+                            <pre class="kod-obsah"><code>:focus {
+    outline: 2px solid #264de4;
+    outline-offset: 2px;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="heading"></i></div>
+                        <h3>Struktura nadpisů</h3>
+                        <p>Nadpisy musí jít postupně H1 → H2 → H3, nesmí se přeskakovat.</p>
+                        <div class="kod-blok kod-maly">
+                            <pre class="kod-obsah"><code>&lt;h1&gt;Hlavní nadpis&lt;/h1&gt;
+  &lt;h2&gt;Sekce&lt;/h2&gt;
+    &lt;h3&gt;Podsekce&lt;/h3&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="text-cursor-input"></i></div>
+                        <h3>Formuláře</h3>
+                        <p>Každý input potřebuje propojený label.</p>
+                        <div class="kod-blok kod-maly">
+                            <pre class="kod-obsah"><code>&lt;label for="email"&gt;E-mail:&lt;/label&gt;
+&lt;input type="email" id="email"&gt;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tip-karta">
+                        <div class="tip-ikona"><i data-lucide="link"></i></div>
+                        <h3>Srozumitelné odkazy</h3>
+                        <p>Text odkazu musí dávat smysl i bez okolního kontextu.</p>
+                        <div class="porovnani-mini">
+                            <span class="spatne">✗ "Klikněte zde"</span>
+                            <span class="spravne">✓ "Stáhnout PDF ceník"</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Jak testovat přístupnost</h2>
+
+                <div class="nastroje-grid">
+                    <div class="nastroj">
+                        <h3><i data-lucide="hand"></i> Ruční testování</h3>
+                        <ul>
+                            <li>Zkuste web ovládat <strong>jen klávesnicí</strong> (Tab, Enter)</li>
+                            <li>Zvětšete stránku na <strong>200%</strong></li>
+                            <li>Vypněte <strong>CSS</strong> a zkontrolujte strukturu</li>
+                            <li>Vyzkoušejte <strong>screen reader</strong> (NVDA je zdarma)</li>
+                        </ul>
+                    </div>
+
+                    <div class="nastroj">
+                        <h3><i data-lucide="wrench"></i> Automatické nástroje</h3>
+                        <ul>
+                            <li><strong>WAVE</strong> - rozšíření pro prohlížeč</li>
+                            <li><strong>Lighthouse</strong> - vestavěný v Chrome DevTools</li>
+                            <li><strong>axe</strong> - profesionální testování</li>
+                            <li><strong>Contrast Checker</strong> - kontrola kontrastů</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="tip-box">
+                    <i data-lucide="alert-triangle"></i> Automatické nástroje zachytí jen asi 30% problémů.
+                    Ruční testování je vždy potřeba.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>ARIA - Když HTML nestačí</h2>
+
+                <p class="sekce-uvod">
+                    <strong>ARIA</strong> (<em>Accessible Rich Internet Applications</em>) jsou
+                    speciální atributy, které pomáhají asistivním technologiím pochopit dynamický obsah.
+                </p>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <h3>Kdy používat ARIA</h3>
+                        <ul class="seznam-standardu">
+                            <li>Interaktivní komponenty (tabs, modály)</li>
+                            <li>Dynamicky měnící se obsah</li>
+                            <li>Custom widgety (slidery, autocomplete)</li>
+                        </ul>
+
+                        <div class="info-box info-varovani">
+                            <p><strong>První pravidlo ARIA:</strong> Nepoužívejte ARIA,
+                                pokud můžete použít nativní HTML element.</p>
+                        </div>
+                    </div>
+                    <div class="sloupec">
+                        <div class="kod-blok">
+                            <div class="kod-hlavicka">
+                                <span class="kod-jazyk">HTML</span>
+                                <span class="kod-nazev">ARIA příklady</span>
+                            </div>
+                            <pre class="kod-obsah"><code>&lt;!-- Popis pro screen reader --&gt;
+&lt;button aria-label="Zavřít menu"&gt;
+    ✕
+&lt;/button&gt;
+
+&lt;!-- Stav elementu --&gt;
+&lt;button aria-expanded="false"&gt;
+    Rozbalit
+&lt;/button&gt;
+
+&lt;!-- Live region --&gt;
+&lt;div aria-live="polite"&gt;
+    Položka přidána do košíku
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce sekce-navigace">
+            <div class="container">
+                <div class="dalsi-stranka">
+                    <span class="dalsi-label">Další téma</span>
+                    <a href="validace.html" class="tlacitko tlacitko-hlavni">
+                        Validace a testování <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="container">
+            <div class="paticka-obsah">
+                <div class="paticka-sekce">
+                    <h4>WebStandardy.cz</h4>
+                    <p>Web vytvořený jako závěrečná práce.</p>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="html.html">HTML5</a></li>
+                        <li><a href="css.html">CSS3</a></li>
+                        <li><a href="pristupnost.html">Přístupnost</a></li>
+                        <li><a href="validace.html">Validace</a></li>
+                    </ul>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Zdroje</h4>
+                    <ul>
+                        <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+                        </li>
+                        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paticka-spodek">
+                <p>© 2025 WebStandardy.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS3 - flexbox, grid, responzivní design a stylování">
+    <meta name="keywords" content="CSS3, flexbox, grid, responzivní design">
+    <meta name="author" content="Student">
+
+    <title>CSS3 | WebStandardy.cz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="html.html">
+    <link rel="prefetch" href="pristupnost.html">
+    <link rel="prefetch" href="validace.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hlavicka">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe"></i>
+                <span class="logo-text">WebStandardy<span class="logo-cz">.cz</span></span>
+            </a>
+
+            <nav class="hlavni-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="menu-toggle-label">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </label>
+
+                <ul class="nav-seznam">
+                    <li><a href="index.html" class="nav-odkaz">Úvod</a></li>
+                    <li><a href="html.html" class="nav-odkaz">HTML5</a></li>
+                    <li><a href="css.html" class="nav-odkaz aktivni">CSS3</a></li>
+                    <li><a href="pristupnost.html" class="nav-odkaz">Přístupnost</a></li>
+                    <li><a href="validace.html" class="nav-odkaz">Validace</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hlavni-obsah">
+        <section class="hero hero-mala">
+            <div class="container">
+                <h1>CSS3</h1>
+                <p class="hero-popis">
+                    CSS určuje, jak webová stránka vypadá. Zatímco HTML definuje strukturu,
+                    CSS se stará o barvy, velikosti a rozložení prvků.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Co je CSS</h2>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <p>
+                            <strong>CSS</strong> (<em>Cascading Style Sheets</em>) je jazyk pro popis vzhledu
+                            webových stránek. Název "kaskádové" znamená, že se styly aplikují postupně
+                            a lze je přepisovat specifičtějšími pravidly.
+                        </p>
+                        <p>
+                            CSS se většinou píše do samostatného souboru a propojuje se s HTML pomocí
+                            značky <code>&lt;link&gt;</code>. Díky tomu lze snadno změnit vzhled celého webu
+                            úpravou jednoho souboru.
+                        </p>
+                    </div>
+                    <div class="sloupec">
+                        <div class="kod-blok">
+                            <div class="kod-hlavicka">
+                                <span class="kod-jazyk">CSS</span>
+                                <span class="kod-nazev">Základní syntaxe</span>
+                            </div>
+                            <pre class="kod-obsah"><code>h1 {
+    color: #264de4;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Box Model</h2>
+
+                <p class="sekce-uvod">
+                    Každý HTML element je v CSS reprezentován jako obdélníková "krabice".
+                    Pochopení box modelu je klíčové pro správné rozvržení stránky.
+                </p>
+
+                <div class="box-model-demo">
+                    <div class="box-model-vrstvy">
+                        <div class="box-margin">
+                            <span class="box-label">margin</span>
+                            <div class="box-border">
+                                <span class="box-label">border</span>
+                                <div class="box-padding">
+                                    <span class="box-label">padding</span>
+                                    <div class="box-content">
+                                        <span>content</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-model-popis">
+                        <ul>
+                            <li><strong>Content</strong> - samotný obsah elementu</li>
+                            <li><strong>Padding</strong> - vnitřní odsazení</li>
+                            <li><strong>Border</strong> - ohraničení</li>
+                            <li><strong>Margin</strong> - vnější odsazení</li>
+                        </ul>
+
+                        <div class="kod-blok">
+                            <pre class="kod-obsah"><code>* { box-sizing: border-box; }</code></pre>
+                        </div>
+                        <p>Tento řádek je dobré mít na začátku každého CSS souboru.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Flexbox</h2>
+
+                <p class="sekce-uvod">
+                    Flexbox slouží k zarovnání prvků v jednom směru - buď v řádku, nebo ve sloupci.
+                    Je ideální pro navigace, karty nebo centrace obsahu.
+                </p>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <div class="kod-blok">
+                            <div class="kod-hlavicka">
+                                <span class="kod-jazyk">CSS</span>
+                                <span class="kod-nazev">Flexbox</span>
+                            </div>
+                            <pre class="kod-obsah"><code>.kontejner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.polozka {
+    flex: 1;
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="sloupec">
+                        <div class="flex-demo">
+                            <div class="flex-demo-kontejner">
+                                <div class="flex-demo-polozka">1</div>
+                                <div class="flex-demo-polozka">2</div>
+                                <div class="flex-demo-polozka">3</div>
+                            </div>
+                            <p class="demo-popisek">Tři prvky rovnoměrně rozdělené</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Užitečné vlastnosti</h3>
+                <div class="vlastnosti-grid">
+                    <div class="vlastnost">
+                        <code>justify-content</code>
+                        <p>Rozmístění na hlavní ose</p>
+                    </div>
+                    <div class="vlastnost">
+                        <code>align-items</code>
+                        <p>Zarovnání na vedlejší ose</p>
+                    </div>
+                    <div class="vlastnost">
+                        <code>flex-wrap</code>
+                        <p>Zalamování prvků</p>
+                    </div>
+                    <div class="vlastnost">
+                        <code>gap</code>
+                        <p>Mezera mezi prvky</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>CSS Grid</h2>
+
+                <p class="sekce-uvod">
+                    Grid je určený pro složitější dvourozměrná rozložení.
+                    Hodí se pro celkový layout stránky nebo galerie obrázků.
+                </p>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <div class="kod-blok">
+                            <div class="kod-hlavicka">
+                                <span class="kod-jazyk">CSS</span>
+                                <span class="kod-nazev">Grid</span>
+                            </div>
+                            <pre class="kod-obsah"><code>.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="sloupec">
+                        <div class="grid-demo">
+                            <div class="grid-demo-kontejner">
+                                <div class="grid-demo-polozka">1</div>
+                                <div class="grid-demo-polozka">2</div>
+                                <div class="grid-demo-polozka">3</div>
+                                <div class="grid-demo-polozka">4</div>
+                                <div class="grid-demo-polozka">5</div>
+                                <div class="grid-demo-polozka">6</div>
+                            </div>
+                            <p class="demo-popisek">Mřížka 3×2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Kdy použít co</h2>
+
+                <div class="porovnani">
+                    <div class="porovnani-sloupec">
+                        <h3><i data-lucide="move-horizontal"></i> Flexbox</h3>
+                        <ul class="plus-seznam">
+                            <li>Navigace a menu</li>
+                            <li>Zarovnání tlačítek</li>
+                            <li>Karty v řadě</li>
+                            <li>Centrace obsahu</li>
+                        </ul>
+                    </div>
+
+                    <div class="porovnani-sloupec">
+                        <h3><i data-lucide="grid-3x3"></i> Grid</h3>
+                        <ul class="plus-seznam">
+                            <li>Celkový layout stránky</li>
+                            <li>Galerie obrázků</li>
+                            <li>Dashboardy</li>
+                            <li>Složité rozložení</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="tip-box">
+                    <i data-lucide="lightbulb"></i> Flexbox a Grid se dají kombinovat. Grid pro hlavní layout stránky,
+                    Flexbox pro menší komponenty uvnitř.
+                </p>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>CSS Proměnné</h2>
+
+                <p class="sekce-uvod">
+                    CSS proměnné (custom properties) umožňují definovat hodnoty na jednom místě
+                    a používat je v celém souboru. Usnadňují změny designu.
+                </p>
+
+                <div class="kod-blok">
+                    <div class="kod-hlavicka">
+                        <span class="kod-jazyk">CSS</span>
+                        <span class="kod-nazev">Proměnné v praxi</span>
+                    </div>
+                    <pre class="kod-obsah"><code>:root {
+    --barva-hlavni: #264de4;
+    --barva-pozadi: #1a1a2e;
+    --mezera: 1rem;
+}
+
+.tlacitko {
+    background-color: var(--barva-hlavni);
+    padding: var(--mezera);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Responzivní design</h2>
+
+                <p class="sekce-uvod">
+                    Web musí fungovat na všech zařízeních - od mobilů po velké monitory.
+                    K tomu slouží media queries.
+                </p>
+
+                <div class="kod-blok">
+                    <div class="kod-hlavicka">
+                        <span class="kod-jazyk">CSS</span>
+                        <span class="kod-nazev">Media queries</span>
+                    </div>
+                    <pre class="kod-obsah"><code>/* Základní styl - mobil */
+.box { padding: 1rem; }
+
+/* Tablet a výš */
+@media (min-width: 768px) {
+    .box { padding: 2rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .box { max-width: 1200px; }
+}
+
+/* Tisk */
+@media print {
+    .navigace { display: none; }
+}</code></pre>
+                </div>
+
+                <h3>Běžně používané breakpointy</h3>
+                <div class="breakpointy">
+                    <div class="breakpoint">
+                        <span class="breakpoint-cislo">576px</span>
+                        <span class="breakpoint-popis">Malé mobily</span>
+                    </div>
+                    <div class="breakpoint">
+                        <span class="breakpoint-cislo">768px</span>
+                        <span class="breakpoint-popis">Tablety</span>
+                    </div>
+                    <div class="breakpoint">
+                        <span class="breakpoint-cislo">1024px</span>
+                        <span class="breakpoint-popis">Desktop</span>
+                    </div>
+                    <div class="breakpoint">
+                        <span class="breakpoint-cislo">1200px</span>
+                        <span class="breakpoint-popis">Velké monitory</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce sekce-navigace">
+            <div class="container">
+                <div class="dalsi-stranka">
+                    <span class="dalsi-label">Další téma</span>
+                    <a href="pristupnost.html" class="tlacitko tlacitko-hlavni">
+                        Přístupnost webu <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="container">
+            <div class="paticka-obsah">
+                <div class="paticka-sekce">
+                    <h4>WebStandardy.cz</h4>
+                    <p>Web vytvořený jako závěrečná práce.</p>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="html.html">HTML5</a></li>
+                        <li><a href="css.html">CSS3</a></li>
+                        <li><a href="pristupnost.html">Přístupnost</a></li>
+                        <li><a href="validace.html">Validace</a></li>
+                    </ul>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Zdroje</h4>
+                    <ul>
+                        <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+                        </li>
+                        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paticka-spodek">
+                <p>© 2025 WebStandardy.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

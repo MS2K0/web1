@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webové standardy - HTML5, CSS3, přístupnost a validace pro studenty">
+    <meta name="keywords" content="webové standardy, HTML5, CSS3, web development">
+    <meta name="author" content="Student">
+
+    <title>Úvod | WebStandardy.cz</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- Prednahrani stranek pro rychlejsi navigaci -->
+    <link rel="prefetch" href="html.html">
+    <link rel="prefetch" href="css.html">
+    <link rel="prefetch" href="pristupnost.html">
+    <link rel="prefetch" href="validace.html">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hlavicka">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i data-lucide="globe"></i>
+                <span class="logo-text">WebStandardy<span class="logo-cz">.cz</span></span>
+            </a>
+
+            <nav class="hlavni-nav">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+                <label for="menu-toggle" class="menu-toggle-label">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">Menu</span>
+                </label>
+
+                <ul class="nav-seznam">
+                    <li><a href="index.html" class="nav-odkaz aktivni">Úvod</a></li>
+                    <li><a href="html.html" class="nav-odkaz">HTML5</a></li>
+                    <li><a href="css.html" class="nav-odkaz">CSS3</a></li>
+                    <li><a href="pristupnost.html" class="nav-odkaz">Přístupnost</a></li>
+                    <li><a href="validace.html" class="nav-odkaz">Validace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hlavni-obsah">
+        <section class="hero">
+            <div class="container hero-s-obrazkem">
+                <div class="hero-text">
+                    <h1>Webové Standardy</h1>
+                    <p class="hero-popis">
+                        Rozhodl jsem se zpracovat téma webových standardů, jelikož je to základ pro každého,
+                        kdo se chce věnovat vývoji webu. Projdeme si HTML5, CSS3, přístupnost a validaci.
+                    </p>
+                    <a href="html.html" class="tlacitko tlacitko-hlavni">
+                        Začít s HTML5 <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-obrazek">
+                    <img src="img/globe-icon.svg" alt="Ikona globálního internetu" width="200" height="200">
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>O čem to vlastně je</h2>
+
+                <div class="dvou-sloupce">
+                    <div class="sloupec">
+                        <p>
+                            <strong>Webové standardy</strong> jsou pravidla a doporučení, jak psát HTML a CSS.
+                            Díky nim funguje web ve všech prohlížečích podobně a je přístupný pro různé
+                            uživatele. O standardy se stará organizace <abbr
+                                title="World Wide Web Consortium">W3C</abbr>,
+                            kterou založil Tim Berners-Lee.
+                        </p>
+                        <p>
+                            Jelikož jsem se rozhodl zpracovat toto téma jako závěrečnou práci,
+                            tak jsem ho rozdělil do několika sekcí.
+                        </p>
+                    </div>
+                    <div class="sloupec">
+                        <p>Témata, která zde probereme:</p>
+                        <ul class="seznam-standardu">
+                            <li><strong>HTML5</strong> - struktura a značky stránky</li>
+                            <li><strong>CSS3</strong> - vizuální stránka webu</li>
+                            <li><strong>JavaScript</strong> - interaktivní prvky</li>
+                            <li><strong>WCAG</strong> - přístupnost pro hendikepované</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Proč je to důležité</h2>
+
+                <div class="karty-grid">
+                    <article class="karta">
+                        <div class="karta-ikona"><i data-lucide="settings"></i></div>
+                        <h3>Kompatibilita</h3>
+                        <p>Web funguje v Chrome, Firefox, Safari i Edge. Nemusíte řešit, proč to někde nefunguje.</p>
+                    </article>
+
+                    <article class="karta">
+                        <div class="karta-ikona"><i data-lucide="accessibility"></i></div>
+                        <h3>Přístupnost</h3>
+                        <p>Stránky mohou používat i lidé s postižením. Screen readery pak obsah přečtou správně.</p>
+                    </article>
+
+                    <article class="karta">
+                        <div class="karta-ikona"><i data-lucide="search"></i></div>
+                        <h3>SEO</h3>
+                        <p>Vyhledávače lépe pochopí strukturu webu a stránky se mohou lépe umístit ve výsledcích.</p>
+                    </article>
+
+                    <article class="karta">
+                        <div class="karta-ikona"><i data-lucide="zap"></i></div>
+                        <h3>Výkon</h3>
+                        <p>Čistý kód prohlížeč zpracuje rychleji. To oceníte hlavně na mobilech.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Pár zajímavých čísel</h2>
+
+                <div class="fakta-grid">
+                    <div class="fakt">
+                        <span class="fakt-cislo">1989</span>
+                        <span class="fakt-popis">Vznik webu</span>
+                    </div>
+                    <div class="fakt">
+                        <span class="fakt-cislo">5</span>
+                        <span class="fakt-popis">Verze HTML</span>
+                    </div>
+                    <div class="fakt">
+                        <span class="fakt-cislo">95%</span>
+                        <span class="fakt-popis">Webů používá CSS</span>
+                    </div>
+                    <div class="fakt">
+                        <span class="fakt-cislo">16%</span>
+                        <span class="fakt-popis">Lidí má nějaký hendikep</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sekce">
+            <div class="container">
+                <h2>Témata k prozkoumání</h2>
+
+                <div class="temata-grid">
+                    <a href="html.html" class="tema-karta">
+                        <i data-lucide="file-code"></i>
+                        <h3>HTML5</h3>
+                        <p>Značky, struktura, sémantika</p>
+                    </a>
+
+                    <a href="css.html" class="tema-karta">
+                        <i data-lucide="palette"></i>
+                        <h3>CSS3</h3>
+                        <p>Flexbox, Grid, responzivita</p>
+                    </a>
+
+                    <a href="pristupnost.html" class="tema-karta">
+                        <i data-lucide="accessibility"></i>
+                        <h3>Přístupnost</h3>
+                        <p>WCAG, alt texty, kontrasty</p>
+                    </a>
+
+                    <a href="validace.html" class="tema-karta">
+                        <i data-lucide="check-circle"></i>
+                        <h3>Validace</h3>
+                        <p>Kontrola chyb, testování</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="container">
+            <div class="paticka-obsah">
+                <div class="paticka-sekce">
+                    <h4>WebStandardy.cz</h4>
+                    <p>Web vytvořený jako závěrečná práce.</p>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Navigace</h4>
+                    <ul>
+                        <li><a href="index.html">Úvod</a></li>
+                        <li><a href="html.html">HTML5</a></li>
+                        <li><a href="css.html">CSS3</a></li>
+                        <li><a href="pristupnost.html">Přístupnost</a></li>
+                        <li><a href="validace.html">Validace</a></li>
+                    </ul>
+                </div>
+                <div class="paticka-sekce">
+                    <h4>Zdroje</h4>
+                    <ul>
+                        <li><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a></li>
+                        <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a>
+                        </li>
+                        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Validátor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="paticka-spodek">
+                <p>© 2025 WebStandardy.cz</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
