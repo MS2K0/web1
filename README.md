@@ -20,7 +20,7 @@ web1-main/
 
 ## 🚀 Spuštění
 
-Stačí otevřít `index.html` v prohlížeči nebo otevřít ms2k0.github.io/web1/
+Stačí otevřít `index.html` v prohlížeči nebo otevřít https://ms2k0.github.io/web1/
 
 ## 🛠️ Technologie
 
