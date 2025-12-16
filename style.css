@@ -42,7 +42,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--bg-primary);
     color: #0a0a0a;
     line-height: 1.7;
     min-height: 100vh;
@@ -1438,4 +1438,5 @@ strong {
         color: #666666;
     }
 }
+
 
